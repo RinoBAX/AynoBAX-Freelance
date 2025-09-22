@@ -83,8 +83,7 @@ const HomePage = () => {
                     </ActionCard>
 
                     <ActionCard icon={<GraduationCap size={24}/>} title="Kelas Digital Marketing" description="Ikuti kelas untuk meningkatkan skill Anda dalam pemasaran digital.">
-                        <ActionButton href={links.kelasGratis}>Daftar Kelas Gratis (1 Pertemuan)</ActionButton>
-                        <ActionButton href={links.kelasExpert}>Daftar Kelas Expert (1 Bulan)</ActionButton>
+                        <ActionButton href={links.kelasGratis}>Daftar Kelas Digital Marketing (Gratis)</ActionButton>
                     </ActionCard>
                     
                     <ActionCard icon={<CreditCard size={24}/>} title="Pencairan Tunai" description="Ajukan pencairan tunai untuk berbagai jenis closing yang berhasil Anda dapatkan.">
