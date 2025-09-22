@@ -90,7 +90,7 @@ const HomePage = () => {
                     <ActionCard icon={<CreditCard size={24}/>} title="Pencairan Tunai" description="Ajukan pencairan tunai untuk berbagai jenis closing yang berhasil Anda dapatkan.">
                         <ActionButton href={links.pencairanOlshop}>Pencairan Olshop</ActionButton>
                         <ActionButton href={links.pencairanCCLokal}>Pencairan CC Lokal</ActionButton>
-                        <ActionButton href={links.pencairanDebitProtokol}>Pencairan Debit Protokol(Coming-Soon)</ActionButton>
+                        <ActionButton href={links.pencairanDebitProtokol}>Pencairan Debit Protokol</ActionButton>
                     </ActionCard>
 
                     <ActionCard icon={<School2 size={24}/>} title="Kuliah Kilat" description="Dapatkan informasi lengkap mengenai program percepatan karir melalui Kuliah Kilat.">
