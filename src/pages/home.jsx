@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Briefcase, Banknote, QrCode, GraduationCap, Sheet, HandCoins } from 'lucide-react';
 
-const waNumber = '6281212345678'; // <-- GANTI NOMOR WA DI SINI
+const waNumber = '6285719409984';
 const waText = "Halo, Nama Saya .......... saya ingin menanyakan terkait akses hasil pengerjaan supaya saya dapat melihat dan menghitung hasil freelance saya. Mohon Bantuannya";
 const encodedWaText = encodeURIComponent(waText);
 
@@ -13,15 +13,15 @@ const textDebitProtokol = `${pencairanBaseText} Debit Protokol${pencairanEndText
 
 
 const links = {
-    lamaranSales: '#',
-    lamaranLeader: '#',
+    lamaranSales: 'https://docs.google.com/forms/d/e/1FAIpQLSdUFD9ni1tYKlUrazi1eEJi29NQQobi3h8we34InkeNyZm6Ew/viewform',
+    lamaranLeader: 'https://docs.google.com/forms/d/e/1FAIpQLSdUFD9ni1tYKlUrazi1eEJi29NQQobi3h8we34InkeNyZm6Ew/viewform',
     rekBCA: '#',
-    rekBTN: '#',
+    rekBTN: 'https://docs.google.com/forms/d/e/1FAIpQLSfQGRfIS5QblwM4lUx7YHq-eUj3r1dpAyorywng2G13JquoYg/viewform?usp=sharing&ouid=112661044288315323683',
     rekSeaBank: '#',
-    qrisOCBC: '#',
-    qrisBCA: '#',
+    qrisOCBC: 'https://docs.google.com/forms/d/e/1FAIpQLSfiwFISMzT9eHqet8rlgyv4dEW4XZdDAcl6yYJVm60kqGrSEA/viewform?usp=sharing&ouid=112679264633387280959',
+    qrisBCA: 'https://docs.google.com/forms/d/e/1FAIpQLSet0w1VmmPVSHQKBr7_5FH8Ghw4baIdEhAtYVFnzIlMWiY7yw/viewform?usp=sharing&ouid=112679264633387280959',
     qrisCIMB: '#',
-    kelasGratis: '#',
+    kelasGratis: 'https://forms.gle/GiDmFGf4Y88CjqtH8',
     kelasExpert: '#',
     requestSpreadsheet: `https://wa.me/${waNumber}?text=${encodedWaText}`,
     pencairanOlshop: `https://wa.me/${waNumber}?text=${encodeURIComponent(textOlshop)}`,
@@ -86,20 +86,20 @@ const HomePage = () => {
                     </ActionCard>
 
                     <ActionCard icon={<Banknote size={24}/>} title="Pembukaan Rekening" description="Tautan cepat untuk pendaftaran pembukaan rekening bank partner.">
-                        <ActionButton href={links.rekBCA}>Rekening BCA</ActionButton>
+                        <ActionButton href={links.rekBCA}>Rekening BCA (Coming soon)</ActionButton>
                         <ActionButton href={links.rekBTN}>Rekening BTN</ActionButton>
-                        <ActionButton href={links.rekSeaBank}>Rekening SeaBank</ActionButton>
+                        <ActionButton href={links.rekSeaBank}>Rekening SeaBank (Coming soon)</ActionButton>
                     </ActionCard>
 
                     <ActionCard icon={<QrCode size={24}/>} title="Pengajuan Qris" description="Tautan cepat untuk pendaftaran layanan QRIS dari berbagai bank.">
                         <ActionButton href={links.qrisOCBC}>QRIS OCBC</ActionButton>
                         <ActionButton href={links.qrisBCA}>QRIS BCA</ActionButton>
-                        <ActionButton href={links.qrisCIMB}>QRIS CIMB</ActionButton>
+                        <ActionButton href={links.qrisCIMB}>QRIS CIMB (Coming soon)</ActionButton>
                     </ActionCard>
 
                     <ActionCard icon={<GraduationCap size={24}/>} title="Kelas Digital Marketing" description="Ikuti kelas untuk meningkatkan skill Anda dalam pemasaran digital.">
-                        <ActionButton href={links.kelasGratis}>Kelas Gratis (1 Pertemuan)</ActionButton>
-                        <ActionButton href={links.kelasExpert}>Kelas Expert (1 Bulan)</ActionButton>
+                        <ActionButton href={links.kelasGratis}>Kelas Gratis (1 Pertemuan) (Coming soon)</ActionButton>
+                        <ActionButton href={links.kelasExpert}>Kelas Expert (1 Bulan) (Coming soon)</ActionButton>
                     </ActionCard>
 
                     <ActionCard icon={<Sheet size={24}/>} title="Request Spreadsheet" description="Minta akses ke spreadsheet hasil pengerjaan Anda melalui WhatsApp.">
