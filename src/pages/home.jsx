@@ -1,32 +1,27 @@
 import React from 'react';
-import { ArrowRight, Briefcase, Banknote, QrCode, GraduationCap, Sheet, HandCoins } from 'lucide-react';
+import { ArrowRight, Briefcase, Banknote, QrCode, GraduationCap, MessageSquare, CreditCard, School2 } from 'lucide-react';
 
-const waNumber = '6285719409984';
-const waText = "Halo, Nama Saya .......... saya ingin menanyakan terkait akses hasil pengerjaan supaya saya dapat melihat dan menghitung hasil freelance saya. Mohon Bantuannya";
-const encodedWaText = encodeURIComponent(waText);
-
-const pencairanBaseText = "Halo, Nama saya ............ . Saya dapat closing untuk pencairan";
-const pencairanEndText = ", Mohon Bantuannya";
-const textOlshop = `${pencairanBaseText} Olshop${pencairanEndText}`;
-const textCcLokal = `${pencairanBaseText} CC Lokal${pencairanEndText}`;
-const textDebitProtokol = `${pencairanBaseText} Debit Protokol${pencairanEndText}`;
-
+const createWhatsAppLink = (text) => {
+    const phoneNumber = "6285719409984"; 
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+};
 
 const links = {
-    lamaranSales: 'https://docs.google.com/forms/d/e/1FAIpQLSdUFD9ni1tYKlUrazi1eEJi29NQQobi3h8we34InkeNyZm6Ew/viewform',
-    lamaranLeader: 'https://docs.google.com/forms/d/e/1FAIpQLSdUFD9ni1tYKlUrazi1eEJi29NQQobi3h8we34InkeNyZm6Ew/viewform',
+    lamaranSales: 'https://forms.gle/SGoyPLFf4Y6tPQGM6',
+    lamaranLeader: 'https://forms.gle/SGoyPLFf4Y6tPQGM6',
     rekBCA: '#',
-    rekBTN: 'https://docs.google.com/forms/d/e/1FAIpQLSfQGRfIS5QblwM4lUx7YHq-eUj3r1dpAyorywng2G13JquoYg/viewform?usp=sharing&ouid=112661044288315323683',
+    rekBTN: 'https://forms.gle/GgBspHBK9TaMELRQ7',
     rekSeaBank: '#',
-    qrisOCBC: 'https://docs.google.com/forms/d/e/1FAIpQLSfiwFISMzT9eHqet8rlgyv4dEW4XZdDAcl6yYJVm60kqGrSEA/viewform?usp=sharing&ouid=112679264633387280959',
-    qrisBCA: 'https://docs.google.com/forms/d/e/1FAIpQLSet0w1VmmPVSHQKBr7_5FH8Ghw4baIdEhAtYVFnzIlMWiY7yw/viewform?usp=sharing&ouid=112679264633387280959',
+    qrisOCBC: 'https://forms.gle/as22R3wW2TLD1ra59',
+    qrisBCA: 'https://forms.gle/MzDeNnqCmFRFh1dm7',
     qrisCIMB: '#',
-    kelasGratis: 'https://forms.gle/GiDmFGf4Y88CjqtH8',
+    kelasGratis: 'https://forms.gle/xg5iXDRXLc1LSnfJ7',
     kelasExpert: '#',
-    requestSpreadsheet: `https://wa.me/${waNumber}?text=${encodedWaText}`,
-    pencairanOlshop: `https://wa.me/${waNumber}?text=${encodeURIComponent(textOlshop)}`,
-    pencairanCcLokal: `https://wa.me/${waNumber}?text=${encodeURIComponent(textCcLokal)}`,
-    pencairanDebitProtokol: `https://wa.me/${waNumber}?text=${encodeURIComponent(textDebitProtokol)}`,
+    requestSpreadsheet: createWhatsAppLink("Halo, Nama Saya .........., saya ingin menanyakan terkait akses hasil pengerjaan supaya saya dapat melihat dan menghitung hasil freelance saya. Mohon Bantuannya"),
+    pencairanOlshop: createWhatsAppLink("Halo, Nama saya ............ . Saya dapat closing untuk pencairan Olshop, Mohon Bantuannya"),
+    pencairanCCLokal: createWhatsAppLink("Halo, Nama saya ............ . Saya dapat closing untuk pencairan CC Lokal, Mohon Bantuannya"),
+    pencairanDebitProtokol: createWhatsAppLink("Halo, Nama saya ............ . Saya dapat closing untuk pencairan Debit Protokol, Mohon Bantuannya"),
+    kuliahKilat: createWhatsAppLink("Halo, Nama Saya ................, Saya ingin menanyakan Terkait pemasaran Kuliah Kilat"),
 };
 
 const ActionCard = ({ icon, title, description, children }) => (
@@ -43,12 +38,12 @@ const ActionCard = ({ icon, title, description, children }) => (
 );
 
 const ActionButton = ({ href, children }) => {
-    const buttonClasses = "group/button w-full flex items-center justify-center px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 ease-in-out transform hover:scale-105 bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-md hover:from-red-700 hover:to-rose-800 hover:shadow-lg hover:shadow-rose-700/50";
+    const baseClasses = "group w-full flex items-center justify-center px-4 py-3 rounded-lg font-semibold text-center transition-all duration-300 ease-in-out transform hover:scale-105 bg-blue-900/50 border border-blue-700 text-blue-100 hover:bg-rose-700/50 hover:border-rose-600 hover:text-white";
 
     return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className={buttonClasses}>
+        <a href={href} target="_blank" rel="noopener noreferrer" className={baseClasses}>
             {children}
-            <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover/button:opacity-100 transition-opacity duration-300" />
+            <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </a>
     );
 };
@@ -58,58 +53,52 @@ const HomePage = () => {
         <div className="min-h-screen bg-gradient-to-b from-blue-900 via-gray-900 to-black text-white font-sans">
             <div className="relative text-center py-20 sm:py-28 px-4">
                  <div className="absolute inset-0 bg-black opacity-20 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
-                    Pusat Akses Freelancer
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tighter mb-4">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-blue-400 block">Pusat Akses Freelancer</span>
                 </h1>
-                <div className="max-w-3xl mx-auto text-lg text-blue-200/80">
-                    <p>Semua tautan penting yang Anda butuhkan untuk memulai, mengerjakan, dan melaporkan pekerjaan Anda dalam kolaborasi antara:</p>
-                    <div className="mt-4">
-                        <span className="block text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-300">
-                            PT Bax Digital Indonesia
-                        </span>
-                        <span className="my-1 block text-xl font-semibold text-rose-500">
-                            feat
-                        </span>
-                        <span className="block text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-300">
-                            PT Ayno Global Support
-                        </span>
-                    </div>
-                </div>
+                <p className="max-w-3xl mx-auto text-lg text-blue-200/80 leading-relaxed">
+                    Kolaborasi Strategis <br className="sm:hidden" />
+                    <span className="font-bold text-white">PT Bax Digital Indonesia</span> feat <span className="font-bold text-white">PT Ayno Global Support</span>
+                </p>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <ActionCard icon={<Briefcase size={24}/>} title="Lamaran Kerja Freelance" description="Daftarkan diri Anda untuk menjadi bagian dari tim Sales atau Leader kami.">
+                    <ActionCard icon={<Briefcase size={24}/>} title="Lamaran Kerja" description="Daftarkan diri Anda untuk menjadi bagian dari tim Sales atau Leader kami.">
                         <ActionButton href={links.lamaranSales}>Lamar sebagai Sales</ActionButton>
                         <ActionButton href={links.lamaranLeader}>Lamar sebagai Leader</ActionButton>
                     </ActionCard>
 
                     <ActionCard icon={<Banknote size={24}/>} title="Pembukaan Rekening" description="Tautan cepat untuk pendaftaran pembukaan rekening bank partner.">
-                        <ActionButton href={links.rekBCA}>Rekening BCA (Coming soon)</ActionButton>
+                        <ActionButton href={links.rekBCA}>Rekening BCA (Coming-Soon) </ActionButton>
                         <ActionButton href={links.rekBTN}>Rekening BTN</ActionButton>
-                        <ActionButton href={links.rekSeaBank}>Rekening SeaBank (Coming soon)</ActionButton>
+                        <ActionButton href={links.rekSeaBank}>Rekening SeaBank(Coming-Soon)</ActionButton>
                     </ActionCard>
 
-                    <ActionCard icon={<QrCode size={24}/>} title="Pengajuan Qris" description="Tautan cepat untuk pendaftaran layanan QRIS dari berbagai bank.">
+                    <ActionCard icon={<QrCode size={24}/>} title="Pengajuan QRIS" description="Tautan cepat untuk pendaftaran layanan QRIS dari berbagai bank.">
                         <ActionButton href={links.qrisOCBC}>QRIS OCBC</ActionButton>
                         <ActionButton href={links.qrisBCA}>QRIS BCA</ActionButton>
-                        <ActionButton href={links.qrisCIMB}>QRIS CIMB (Coming soon)</ActionButton>
+                        <ActionButton href={links.qrisCIMB}>QRIS CIMB(Coming-Soon)</ActionButton>
                     </ActionCard>
 
                     <ActionCard icon={<GraduationCap size={24}/>} title="Kelas Digital Marketing" description="Ikuti kelas untuk meningkatkan skill Anda dalam pemasaran digital.">
-                        <ActionButton href={links.kelasGratis}>Kelas Gratis (1 Pertemuan) (Coming soon)</ActionButton>
-                        <ActionButton href={links.kelasExpert}>Kelas Expert (1 Bulan) (Coming soon)</ActionButton>
+                        <ActionButton href={links.kelasGratis}>Daftar Kelas Gratis (1 Pertemuan)</ActionButton>
+                        <ActionButton href={links.kelasExpert}>Daftar Kelas Expert (1 Bulan)</ActionButton>
+                    </ActionCard>
+                    
+                    <ActionCard icon={<CreditCard size={24}/>} title="Pencairan Tunai" description="Ajukan pencairan tunai untuk berbagai jenis closing yang berhasil Anda dapatkan.">
+                        <ActionButton href={links.pencairanOlshop}>Pencairan Olshop</ActionButton>
+                        <ActionButton href={links.pencairanCCLokal}>Pencairan CC Lokal</ActionButton>
+                        <ActionButton href={links.pencairanDebitProtokol}>Pencairan Debit Protokol(Coming-Soon)</ActionButton>
                     </ActionCard>
 
-                    <ActionCard icon={<Sheet size={24}/>} title="Request Spreadsheet" description="Minta akses ke spreadsheet hasil pengerjaan Anda melalui WhatsApp.">
-                        <ActionButton href={links.requestSpreadsheet}>Minta Akses via WhatsApp</ActionButton>
+                    <ActionCard icon={<School2 size={24}/>} title="Kuliah Kilat" description="Dapatkan informasi lengkap mengenai program percepatan karir melalui Kuliah Kilat.">
+                        <ActionButton href={links.kuliahKilat}>Tanya Seputar Kuliah Kilat</ActionButton>
                     </ActionCard>
 
-                    <ActionCard icon={<HandCoins size={24}/>} title="Pencairan Tunai" description="Laporkan closing untuk berbagai jenis layanan pencairan tunai via WhatsApp.">
-                        <ActionButton href={links.pencairanOlshop}>Closing Olshop</ActionButton>
-                        <ActionButton href={links.pencairanCcLokal}>Closing CC Lokal</ActionButton>
-                        <ActionButton href={links.pencairanDebitProtokol}>Closing Debit Protokol</ActionButton>
+                    <ActionCard icon={<MessageSquare size={24}/>} title="Request Spreadsheet" description="Akses hasil pengerjaan Anda untuk memantau dan menghitung pencapaian.">
+                        <ActionButton href={links.requestSpreadsheet}>Minta Akses Spreadsheet</ActionButton>
                     </ActionCard>
 
                 </div>
