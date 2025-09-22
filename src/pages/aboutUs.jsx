@@ -1,7 +1,6 @@
 import React from 'react';
-import { ShieldCheck, Users, BarChart, Briefcase, Bot, Code } from 'lucide-react'; // Menggunakan ikon yang relevan
+import { ShieldCheck, Users, BarChart, Briefcase, Bot, Code } from 'lucide-react';
 
-// Komponen untuk setiap anggota tim dengan gaya baru
 const TeamMemberCard = ({ name, role, imageUrl }) => (
     <div className="group bg-blue-900/30 backdrop-blur-xl border border-blue-700/30 rounded-2xl shadow-lg hover:border-rose-700 hover:-translate-y-2 transition-all duration-300 ease-in-out p-6 text-center">
         <div className="relative w-32 h-32 mx-auto mb-4">
@@ -17,7 +16,6 @@ const TeamMemberCard = ({ name, role, imageUrl }) => (
     </div>
 );
 
-// Komponen untuk Misi & Visi dengan gaya baru
 const MissionItem = ({ icon, title, description }) => (
     <div className="group bg-blue-900/30 backdrop-blur-xl border border-blue-700/30 rounded-2xl shadow-lg hover:border-rose-700 hover:-translate-y-1 transition-all duration-300 ease-in-out p-6 flex flex-col h-full text-center">
         <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-2xl bg-gradient-to-br from-blue-700 to-indigo-800 group-hover:from-red-800 group-hover:to-rose-900 transition-all duration-300 text-white shadow-md mb-4">
@@ -31,7 +29,6 @@ const MissionItem = ({ icon, title, description }) => (
 const AboutUsPage = () => {
     return (
         <div className="min-h-screen bg-gradient-to-b from-blue-900 via-gray-900 to-black text-white font-sans">
-            {/* Hero Section */}
             <div className="relative text-center py-20 sm:py-28 px-4">
                  <div className="absolute inset-0 bg-black opacity-20 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-blue-400">
@@ -42,10 +39,8 @@ const AboutUsPage = () => {
                 </p>
             </div>
 
-            {/* Konten Grid */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
                 
-                {/* Siapa Kami Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="bg-blue-900/30 backdrop-blur-xl border border-blue-700/30 rounded-2xl shadow-lg p-8">
                         <h2 className="text-3xl font-bold text-white mb-4">Siapa Kami?</h2>
@@ -62,7 +57,6 @@ const AboutUsPage = () => {
                     </div>
                 </div>
 
-                {/* Visi & Misi Section */}
                 <div>
                     <div className="text-center mb-12">
                          <h2 className="text-3xl font-bold text-white">Visi & Misi Kami</h2>
@@ -86,20 +80,6 @@ const AboutUsPage = () => {
                         />
                     </div>
                 </div>
-                
-                {/* Tim Kami Section */}
-                <div>
-                     <div className="text-center mb-12">
-                         <h2 className="text-3xl font-bold text-white">Di Balik Layar</h2>
-                         <p className="mt-2 text-lg text-blue-200/80">Tim kami terdiri dari para ahli dengan passion di bidang teknologi dan pemasaran.</p>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                        <TeamMemberCard name="Aderino Arya Nanda" role="Chief Executive Officer" imageUrl="https://placehold.co/128x128/0d3b66/ffffff?text=AAN" />
-                        <TeamMemberCard name="Puja Ayu Miswari" role="Chief Operating Officer" imageUrl="https://placehold.co/128x128/b91c1c/ffffff?text=PAM" />
-                        <TeamMemberCard name="Sultan Bryansyah" role="Chief Technology Officer" imageUrl="https://placehold.co/128x128/0d3b66/ffffff?text=SB" />
-                    </div>
-                </div>
-
             </div>
         </div>
     );
